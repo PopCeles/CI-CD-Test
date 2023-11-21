@@ -12,6 +12,7 @@ pipeline {
                 sh 'ls -l groovy1.txt'
                 sh 'cat groovy1.txt'
                 sh 'cat hello.py'
+                archiveArtifacts artifacts: 'hello.py'
             }
         }
     }
