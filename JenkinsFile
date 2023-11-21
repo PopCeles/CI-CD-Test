@@ -8,11 +8,9 @@ pipeline {
         }
         stage("Step 2"){
             steps {
-                writeFile file: 'groovy1.txt', text: 'Working with files the Groovy way is easy.'
-                sh 'ls -l groovy1.txt'
                 sh 'cat groovy1.txt'
                 sh 'cat hello.py'
-                archiveArtifacts artifacts: 'hello.py', 'test.py', 'testVer2.py'
+                archiveArtifacts artifacts: 'groovy1.txt'
             }
         }
     }
